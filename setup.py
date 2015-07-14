@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 import sys
 
-from setuptools import setup
+from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
+
 
 class PyTestCommand(TestCommand):
     user_options = [('pytest-args=', 'a', "Arguments to pass to py.test")]
@@ -29,6 +30,7 @@ setup(
     author='Darwin Monroy',
     author_email='contact@darwinmonroy.com',
     packages=['dmonroy.codec'],
+    packages=find_packages(),
     include_package_data=True,
     install_requires=[],
     tests_require=[
