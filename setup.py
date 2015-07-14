@@ -29,7 +29,6 @@ setup(
     version='0.1.2',
     author='Darwin Monroy',
     author_email='contact@darwinmonroy.com',
-    packages=['dmonroy.codec'],
     packages=find_packages(),
     include_package_data=True,
     install_requires=[],
