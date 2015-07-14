@@ -4,7 +4,7 @@ import tests
 
 setup(
     name='dmonroy.codec',
-    version='0.0.0',
+    version='0.1.0',
     author='Darwin Monroy',
     author_email='contact@darwinmonroy.com',
     packages=['dmonroy.codec'],
