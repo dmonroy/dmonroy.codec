@@ -17,7 +17,7 @@ class BaseCodec(object):
 
         missing = 0
         p = ''
-        data = b'%s' % data
+        data = b'{0}'.format(data)
         if bs > 1:
             missing = bs - (len(data) % bs)
 
@@ -28,7 +28,7 @@ class BaseCodec(object):
             p = pc * missing
 
         # Get the hexadecimal representation of the binary data
-        hex_data = hexlify(b"{}".format(data)).decode('utf8')
+        hex_data = hexlify(b"{0}".format(data)).decode('utf8')
 
         # And the integer representation of the hex_data
         data = int('0x0' + hex_data, 16)
