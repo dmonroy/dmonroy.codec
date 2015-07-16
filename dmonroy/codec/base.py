@@ -17,7 +17,7 @@ class BaseCodec(object):
 
         missing = 0
         p = ''
-        data = b'{0}'.format(data)
+        data = '{0}'.format(data).encode()
         if bs > 1:
             missing = bs - (len(data) % bs)
 
