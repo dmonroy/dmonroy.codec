@@ -24,16 +24,17 @@ class BaseCodec(object):
             if missing == bs:
                 missing = 0
 
-            data += '\x00' * missing
+            data += b'\x00' * missing
             p = pc * missing
 
+
         # Get the hexadecimal representation of the binary data
-        hex_data = hexlify(b"{0}".format(data)).decode('utf8')
+        hex_data = hexlify(data).decode('utf8')
 
         # And the integer representation of the hex_data
         data = int('0x0' + hex_data, 16)
 
-        if (data == 0):
+        if data == 0:
             return alphabet[0]
         arr = []
         base = len(alphabet)
@@ -83,4 +84,4 @@ class BaseCodec(object):
         if pad:
             res = res[:-1*pad]
 
-        return res
+        return res.decode('utf8')

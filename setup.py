@@ -30,6 +30,7 @@ setup(
     author='Darwin Monroy',
     author_email='contact@darwinmonroy.com',
     packages=find_packages(),
+    namespace_packages=['dmonroy'],
     include_package_data=True,
     install_requires=[],
     tests_require=[
