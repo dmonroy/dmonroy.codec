@@ -26,7 +26,7 @@ class PyTestCommand(TestCommand):
 
 setup(
     name='dmonroy.codec',
-    version='0.1.2',
+    version='0.1.3',
     author='Darwin Monroy',
     author_email='contact@darwinmonroy.com',
     packages=find_packages(),
